@@ -15,7 +15,7 @@ function Note(props) {
 
   async function handleDelete(id) {
     try {
-      await axios.delete(`http://localhost:8000/api/delete/${id}`);
+      await axios.delete(`https://note-keeper-api.onrender.com/api/delete/${id}`);
       props.getNotes();
       props.setSelectedNote({
         id: null,

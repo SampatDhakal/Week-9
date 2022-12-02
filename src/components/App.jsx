@@ -20,7 +20,7 @@ export default function App() {
 
   async function getNotes() {
     try {
-      const res = await axios.get("http://localhost:8000/api");
+      const res = await axios.get("https://note-keeper-api.onrender.com/api");
       setNotesArray(res.data);
     } catch (error) {
       console.log(error);
