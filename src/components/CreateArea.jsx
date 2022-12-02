@@ -28,7 +28,7 @@ function CreateArea(props) {
       };
 
       if (props.update) {
-        await axios.put(`http://localhost:8000/api/update/`, data);
+        await axios.put(`https://note-keeper-api.onrender.com/api/update/`, data);
         props.setSelectedNote({
           id: null,
           title: null,
@@ -36,7 +36,7 @@ function CreateArea(props) {
         });
         props.setUpdate(false);
       } else {
-        await axios.post("http://localhost:8000/api/addNew", note);
+        await axios.post("https://note-keeper-api.onrender.com/api/addNew", note);
         // props.onAdd(note);
       }
       props.getNotes();
